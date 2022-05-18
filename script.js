@@ -1,7 +1,7 @@
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-ctx.fillStyle = "#FFF";
-ctx.font = "16px Monospace";
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = 'green';
+ctx.font = '16px Monospace';
 
 let keys = {};
 
@@ -48,18 +48,18 @@ function draw() {
 setInterval(draw, 10);
 
 function handleKeydown(event) {
-  if (event.key === "w" && leftBar.y > 0) {
+  if (event.key === 'w' && leftBar.y > 0) {
     leftBar.y = leftBar.y - leftBar.speed;
   }
-  if (event.key === "s" && leftBar.y < 480) {
+  if (event.key === 's' && leftBar.y < 480) {
     leftBar.y = leftBar.y + leftBar.speed;
   }
-  if (event.key === "ArrowUp" && rightBar.y > 0) {
+  if (event.key === 'ArrowUp' && rightBar.y > 0) {
     rightBar.y = rightBar.y - rightBar.speed;
   }
-  if (event.key === "ArrowDown" && rightBar.y < 480) {
+  if (event.key === 'ArrowDown' && rightBar.y < 480) {
     rightBar.y = rightBar.y + rightBar.speed;
   }
 }
 
-window.addEventListener("keydown", handleKeydown);
+window.addEventListener('keydown', handleKeydown);
